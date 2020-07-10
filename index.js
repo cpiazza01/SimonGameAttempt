@@ -155,7 +155,7 @@ function simon() {
       setTimeout(function() {
         $(document.body).removeClass("red"), 500
       });
-      $("h2").text("You made it to round " + (squares.length) + "! Press Any Key to Try Again!");
+      $("h2").text("You made it to round " + (squares.length) + "! Press Any Key or Tap Here to Try Again!");
       var loseSound = new Audio("sounds/lose-sound.mp3")
       loseSound.play();
     }, 100);
