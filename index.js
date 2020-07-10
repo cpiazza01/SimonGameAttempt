@@ -7,19 +7,27 @@ function simon() {
   initialize(); //Will initialize the game, or reset it after a player loses and tries again
 
   //Will initialize the game, or reset it after a player loses and tries again
-  //Pressing any key will reset both arrays, change the heading to "Level 1", and begin the game
+  //Pressing any key or clicking the screen will reset both arrays, change the heading to "Level 1", and begin the game
   function initialize() {
     $(document).keypress(function() {
       $("h2").text("Level 1");
-      gameInProgress = true;
       playerSquares = [];
       squares = [];
+      $(".heading").off("click");
       simonGame();
     })
+    $(".heading").click(function() {
+      $("h2").text("Level 1");
+      playerSquares = [];
+      squares = [];
+      $(".heading").off("click");
+      simonGame();
+    })
+
   }
 
   // Starts the game
-  //Turns off the keypress event, then runs both main functions, one after the other
+  //Turns off the keypress or click event, then runs both main functions, one after the other
   function simonGame() {
     $(document).off("keypress");
     selectSquare();
