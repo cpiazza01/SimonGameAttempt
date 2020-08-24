@@ -118,7 +118,7 @@ function simon() {
     $(input).addClass("clicked");
     setTimeout(function() {
       $(input).removeClass("clicked");
-    }, 100);
+    }, 200);
   }
 
   // Will check if the player's selected square matches up with the correct square by comparing the results of both arrays
